@@ -4,6 +4,7 @@ const connectDB = require("./config/db");
 require("dotenv").config();
 
 const routerProduct = require("./routes/productRoute");
+const routerUpload = require("./routes/uploadRoute");
 
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 const PORT = process.env.PORT || 8080;
 
 app.use("/product", routerProduct);
+app.use("/upload", routerUpload);
 
 
 
